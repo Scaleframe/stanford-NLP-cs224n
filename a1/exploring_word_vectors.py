@@ -310,7 +310,8 @@ def reduce_to_k_dim(M, k=2):
     
         # ------------------
         # Write your implementation here.
-    
+    svd = TruncatedSVD(n_components=k, n_iter=n_iters)
+    M_reduced = svd.fit_transform(M)
     
         # ------------------
 
