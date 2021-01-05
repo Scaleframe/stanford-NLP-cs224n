@@ -584,8 +584,21 @@ wv_from_bin.most_similar("leave")
 
 # ------------------
 # Write your implementation here.
+def closer_than_you_think(wv_from_bin, w1 = "short", w2 = "tall", w3 = "tiny"):
+    
+    w1_w2_distance = wv_from_bin.distance(w1, w2)
+    w1_w3_distance = wv_from_bin.distance(w1, w3)
+    assert w1_w2_distance < w1_w3_distance
 
+    print(f"synonyms words: {w1}, and {w3}.\nCosine distance: {w1_w3_distance} ")
+    print("-"*10)
+    print(f"antonym words: {w1}, and {w2}. \nCosine distance: {w1_w2_distance} ")
 
+closer_than_you_think(wv_from_bin)
+
+"""
+possible explanation: short has a higher chance of appearing near tall than tiny. 
+"""
 # ------------------
 
 
