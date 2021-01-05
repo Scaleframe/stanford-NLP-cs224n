@@ -711,6 +711,11 @@ You would think there would be bias in this but it looks pretty even, at least i
 
 # #### <font color="red">Write your answer here.</font>
 
+""" If certain words are found near each other often, it could likely be because humans wrote those words, and those particular contexts. 
+
+If we are training models that are predicting what words appear next to each other, that will encode the biases from the humans that wrote them. What biases show up will depend on where, when, and what context the corpora were written.  
+"""
+
 # # <font color="blue"> Submission Instructions</font>
 # 
 # 1. Click the Save button at the top of the Jupyter Notebook.
