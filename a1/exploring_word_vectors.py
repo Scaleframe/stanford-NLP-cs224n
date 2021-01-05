@@ -209,11 +209,24 @@ def compute_co_occurrence_matrix(corpus, window_size=4):
     
     # ------------------
     # Write your implementation here.
+    M = np.zeros((num_words, num_words))
+    for i, word in enumerate(words):
+        word2Ind[word] = i
 
 
+    for word_list in corpus:
+        for i, center_word in enumerate(word_list):
+            
+            window_left, window_right = max(0, i-window_size), min(i+window_size+1, len(word_list))  
+            context_window = word_list[window_left:i] + word_list[i+1:window_right]
+            
+            for context_word in context_window:
+                if context_word != center_word:
+                    M[word2Ind[center_word], word2Ind[context_word]] += 1
+    
+    return M, word2Ind
     # ------------------
 
-    return M, word2Ind
 
 
 # In[ ]:
