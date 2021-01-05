@@ -140,7 +140,9 @@ def distinct_words(corpus):
     
     # ------------------
     # Write your implementation here.
-
+    corpus_words = sorted(set([word for doc in corpus 
+                                        for word in doc]))
+    num_corpus_words = len(corpus_words)
 
     # ------------------
 
