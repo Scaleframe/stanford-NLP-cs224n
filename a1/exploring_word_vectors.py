@@ -365,7 +365,12 @@ def plot_embeddings(M_reduced, word2Ind, words):
 
     # ------------------
     # Write your implementation here.
-
+    for word in words:
+        idx = word2Ind[word]
+        x = M_reduced[idx, 0]
+        y = M_reduced[idx, 1]
+        plt.scatter(x, y, marker='x', color='red')
+    plt.show()
 
     # ------------------
 
