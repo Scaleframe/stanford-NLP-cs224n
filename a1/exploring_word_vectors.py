@@ -689,7 +689,16 @@ pprint.pprint(wv_from_bin.most_similar(positive=['man', 'worker'], negative=['wo
 
 # ------------------
 # Write your implementation here.
+pprint.pprint(wv_from_bin.most_similar(positive=['woman', 'medicine']))
+print()
+pprint.pprint(wv_from_bin.most_similar(positive=['man', 'medicine']))
 
+"""
+top results for woman, (medical, doctor, she, mother)
+top resutls for man, (medical, doctor, he, woman) 
+
+You would think there would be bias in this but it looks pretty even, at least in this example.  
+"""
 
 # ------------------
 
