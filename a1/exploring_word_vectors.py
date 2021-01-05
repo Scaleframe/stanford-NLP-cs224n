@@ -563,8 +563,7 @@ plot_embeddings(M_reduced_normalized, word2Ind, words)
 
 # ------------------
 # Write your implementation here.
-
-
+wv_from_bin.most_similar("leave")
 # ------------------
 
 
