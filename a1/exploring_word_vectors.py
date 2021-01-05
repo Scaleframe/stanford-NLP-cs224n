@@ -648,7 +648,13 @@ pprint.pprint(wv_from_bin.most_similar(positive=['boxer', 'wrestler'], negative=
 
 # ------------------
 # Write your implementation here.
+pprint.pprint(wv_from_bin.most_similar(positive=['night', 'owl'], negative=['morning']))
+pprint.pprint(wv_from_bin.most_similar(positive=['night', 'owl'], negative=['time']))
+pprint.pprint(wv_from_bin.most_similar(positive=['night', 'owl'], negative=['bird']))
+pprint.pprint(wv_from_bin.most_similar(positive=['night', 'owl'], negative=['prey']))
 
+
+"""Tried with a few variations, removing time like words gives you results for birds, removing bird like components gives you results for time. Not much magic in this one."""
 
 # ------------------
 
