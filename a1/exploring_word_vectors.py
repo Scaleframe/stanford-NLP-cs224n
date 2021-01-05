@@ -630,7 +630,10 @@ pprint.pprint(wv_from_bin.most_similar(positive=['woman', 'king'], negative=['ma
 
 # ------------------
 # Write your implementation here.
+pprint.pprint(wv_from_bin.most_similar(positive=['boxer', 'wrestler'], negative=['ring']))
 
+"""This is pretty interesting, take `boxer` and `wrestler` minus `ring`, and you get judoka.
+"""
 
 # ------------------
 
